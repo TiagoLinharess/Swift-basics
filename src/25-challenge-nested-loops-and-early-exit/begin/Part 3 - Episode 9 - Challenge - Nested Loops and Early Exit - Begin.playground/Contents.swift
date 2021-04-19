@@ -28,7 +28,14 @@
  */
 
 //TODO: Put solution here
+for _ in 1...5 {
+    for _ in 1...10 {
+        print("*", terminator: "")
+    }
+    print()
+}
 
+print("----")
 /*:
  
  ## Challenge 2
@@ -48,7 +55,12 @@
 var pastries: [String] = ["cookie", "danish", "cupcake", "donut", "pie", "brownie", "fritter", "cruller"]
 
 //TODO: Put solution here
-
+for pastry in pastries {
+    if pastry.count > 5 {
+        continue
+    }
+    print(pastry)
+}
 /*:
  
  ## Challenge 3
@@ -60,5 +72,16 @@ var pastries: [String] = ["cookie", "danish", "cupcake", "donut", "pie", "browni
  */
 
 let daysOfTheWeek: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
+print("----")
 //TODO: Put solution here
+for day in daysOfTheWeek {
+    if day == "Sunday" {
+        continue
+    }
+    
+    print(day)
+    
+    if day == "Friday" {
+        break
+    }
+}

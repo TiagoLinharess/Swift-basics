@@ -14,8 +14,14 @@
  As part of the initialization, assign each of those keys a value that corresponds to your own personal information.
  
  */
+var information: [String: String] = [
+    "Name": "Tiago",
+    "Profession": "developer",
+    "Country": "Brazil",
+    "City": "Rio de Janeiro"
+]
 
-
+print(information)
 /*:
  
  ## Challenge 2
@@ -27,7 +33,10 @@
  - Add a `state` key to the dictionary and assign it the value `Ohio`
  
  */
-
+information.updateValue("USA", forKey: "Country")
+information.updateValue("Cleveland", forKey: "City")
+information.updateValue("Ohio", forKey: "State")
+print(information)
 
 /*:
  
@@ -39,7 +48,9 @@
  - Remove the `state` key-value pair with a different strategy.
  
  */
-
+information.removeValue(forKey: "City")
+information["State"] = nil
+print(information)
 
 
 /*:
@@ -49,7 +60,9 @@
  Iterate over the remaining keys and values in the dictionary and print them out.
  
  */
-
+for (key, value) in information {
+    print("\(key) -> \(value)")
+}
 
 
 
